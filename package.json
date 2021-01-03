@@ -1,0 +1,30 @@
+{
+  "name": "github-discord-bot",
+  "version": "1.0.0",
+  "description": "A simple base for future TypeScript projects.",
+  "main": "./build/src/index.js",
+  "repository": "https://github.com/llgava/ts-project-base.git",
+  "author": "Leonardo Luiz Gava <llgavamt@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "build:windows": "SET NODE_ENV=development tsc && echo \"Compilation has been completed!\"",
+    "build": "export NODE_ENV=production tsc && echo \"Compilation has been completed!\"",
+    "start": "node ./build/src/index.js",
+    "dev": "ts-node-dev --respawn --transpile-only --ignore-watch node_modules --no-notify src/index.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.14",
+    "ts-node-dev": "^1.1.1",
+    "typescript": "^4.1.3"
+  },
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.11.1",
+    "@typescript-eslint/parser": "^4.11.1",
+    "discord.js": "^12.5.1",
+    "dotenv": "^8.2.0",
+    "eslint": "^7.17.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "wokcommands": "1.1.5"
+  }
+}

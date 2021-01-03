@@ -5,5 +5,5 @@
 
 
 # Files
-.env
+/.env
 yarn-error.log

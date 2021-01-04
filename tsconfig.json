@@ -17,6 +17,7 @@
     "forceConsistentCasingInFileNames": true,
     "baseUrl": ".",
     "paths": {
+      "@github/*": ["./src/utils/GitHub/*"],
       "@utils/*": ["./src/utils/*"],
       "@config/*": ["./src/config/*"]
     }

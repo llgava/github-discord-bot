@@ -1,13 +1,14 @@
 require("dotenv").config();
 import Discord from 'discord.js';
 import WOKCommands from 'wokcommands';
-import { Octokit } from "@octokit/core";
+import { GitHub } from './utils/GitHub/GitHub';
 
 const Client = new Discord.Client({ partials: ["MESSAGE", "REACTION"] });
-const GitHub = new Octokit({ auth: process.env.GITHUB_TOKEN });
 
 Client.on("ready", async () => {
-  new WOKCommands(Client, 'commands');
+  new WOKCommands(Client, 'commands')
+    .setDefaultPrefix('gh ');
+  new GitHub();
 
   console.clear();
 });
